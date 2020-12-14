@@ -103,7 +103,7 @@ const Register = ({ isAuthenticated, setAlert, register, history }) => {
 							<input
 								type='password'
 								className='form-control'
-								placeholder='Enter your password...'
+								placeholder='Confirm your password...'
 								name='password2'
 								value={password2}
 								onChange={onChange}

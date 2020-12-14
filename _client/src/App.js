@@ -10,6 +10,7 @@ import Landing from './components/pages/Landing';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Dashboard from './components/pages/Dashboard';
+import NotFound from './components/pages/NotFound';
 import About from './components/pages/About';
 import Alert from './components/layout/Alert';
 import Modal from './components/layout/Modal';
@@ -38,6 +39,7 @@ const App = () => {
 						<Route exact path='/register' component={Register} />
 						<PrivateRoute exact path='/dashboard' component={Dashboard} />
 						<PrivateRoute exact path='/about' component={About} />
+						<Route component={NotFound} />
 					</Switch>
 					<Modal />
 					<Footer />

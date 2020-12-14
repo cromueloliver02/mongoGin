@@ -49,6 +49,9 @@ a {
 	width: 50%;
 	margin: auto;
 }
+.w-50-text {
+	width: 50%;
+}
 .navbar {
 	background: #f4f4f4;
 	padding: 0.5rem 0;

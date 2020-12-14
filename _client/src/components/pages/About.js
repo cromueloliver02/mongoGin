@@ -10,11 +10,13 @@ const About = () => {
 						<strong>Version: </strong> 1.0.0
 					</small>
 				</p>
-				<p>
-					MongoGin login system is powered by React JS, Redux, Node,
-					Express and MongoDB database. MongoGin is MongoDB + Login, it's
-					not a drink combo like C2Gin.
-				</p>
+				<div className='w-50-text'>
+					<p>
+						MongoGin login system is powered by React JS, Redux, Node,
+						Express and MongoDB database. MongoGin is MongoDB + Login,
+						it's not a drink combo like C2Gin.
+					</p>
+				</div>
 			</div>
 		</section>
 	);

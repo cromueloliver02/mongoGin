@@ -212,6 +212,15 @@ a {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
+	position: relative;
+}
+.input-group.optional-field span {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 0.85rem;
 }
 .input-group-prepend {
 	/* background: #333; */

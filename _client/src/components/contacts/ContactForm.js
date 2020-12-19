@@ -153,7 +153,7 @@ const ContactForm = ({
 					<label htmlFor='phone' className='form-label'>
 						Address
 					</label>
-					<div className='input-group'>
+					<div className='input-group optional-field'>
 						<input
 							type='text'
 							className='form-control'
@@ -165,6 +165,7 @@ const ContactForm = ({
 						<div className='input-group-prepend'>
 							<i className='fas fa-map-marker-alt'></i>
 						</div>
+						<span>Optional</span>
 					</div>
 				</div>
 				<div className='form-group'>
@@ -210,7 +211,10 @@ const ContactForm = ({
 						</div>
 					</div>
 				</div>
-				<button type='submit' className='btn btn-block'>
+				<button
+					type='submit'
+					className={`btn btn-block ${current && 'btn-dark'}`}
+				>
 					{current ? 'Update' : 'Add'} Contact
 				</button>
 			</form>

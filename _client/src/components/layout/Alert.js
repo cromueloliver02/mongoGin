@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const Alert = ({ alert }) =>
-	alert !== null &&
 	alert.length > 0 && (
 		<div
 			className={`alert alert-${alert[0].type} ${

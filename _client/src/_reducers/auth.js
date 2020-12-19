@@ -12,7 +12,7 @@ const initialState = {
 	token: localStorage.getItem('token'),
 	isAuthenticated: null,
 	user: null,
-	loading: false
+	loading: true
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -32,9 +32,13 @@ export default (state = initialState, { type, payload }) => {
 				isAuthenticated: true,
 				loading: false
 			};
+		// @todo		EDIT BACK TO ORIGINAL
 		case REGISTER_FAIL:
 		case LOGIN_FAIL:
 		case AUTH_ERROR:
+			return {
+				...state
+			};
 		case LOGOUT:
 			localStorage.removeItem('token');
 			return {

@@ -2,12 +2,29 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import ContactForm from '../contacts/ContactForm';
+import ContactFilter from '../contacts/ContactFilter';
+import Contacts from '../contacts/Contacts';
+
 const Dashboard = ({ user }) => {
 	return (
 		<section className='dashboard'>
 			<div className='container'>
-				<h2 className='mb-4'>DASHBOARD</h2>
-				<p>Hi {user && user.name}! Welcome to your dashboard.</p>
+				{user && (
+					<p className='mb-4'>
+						Hi {user.name}! Welcome to your contact manager.
+					</p>
+				)}
+
+				<div className='contact-manager-container'>
+					<div className='contact-form'>
+						<ContactForm />
+					</div>
+					<div className='contacts-container'>
+						<ContactFilter />
+						<Contacts />
+					</div>
+				</div>
 			</div>
 		</section>
 	);

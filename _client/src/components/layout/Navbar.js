@@ -12,15 +12,15 @@ const Navbar = ({ auth: { isAuthenticated, loading }, setModal }) => {
 	};
 
 	const authLinks = (
-		<ul className='navbar-nav'>
-			<li className='nav-item'>
-				<Link to='/dashboard' className='nav-link'>
+		<ul className='custom-navbar-nav'>
+			<li className='custom-nav-item'>
+				<Link to='/dashboard' className='custom-nav-link'>
 					Dashboard
 				</Link>
-				<Link to='/about' className='nav-link ml-3'>
+				<Link to='/about' className='custom-nav-link ml-3'>
 					About
 				</Link>
-				<a href='#!' onClick={onLogout} className='nav-link ml-3'>
+				<a href='#!' onClick={onLogout} className='custom-nav-link ml-3'>
 					<i className='fas fa-sign-out-alt'></i> Logout
 				</a>
 			</li>
@@ -28,7 +28,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, setModal }) => {
 	);
 
 	const guestLinks = (
-		<ul className='navbar-nav'>
+		<ul className='custom-navbar-nav'>
 			{/* <li className='nav-item'>
 				<Link to='/about' className='nav-link'>
 					About
@@ -38,10 +38,11 @@ const Navbar = ({ auth: { isAuthenticated, loading }, setModal }) => {
 	);
 
 	return (
-		<nav className='navbar'>
+		<nav className='custom-navbar'>
 			<div className='container'>
-				<Link to='/' className='navbar-brand'>
-					<i className='fab fa-envira'></i> MongoGin
+				<Link to='/' className='custom-navbar-brand'>
+					<i className='fab fa-envira logo-icon'></i>
+					<span className='text-main'>Mongo</span>Gin
 				</Link>
 				{!loading && (
 					<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>

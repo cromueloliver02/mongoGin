@@ -29,42 +29,43 @@ const Login = ({ isAuthenticated, login }) => {
 		<div className='background'>
 			<div className='form-container'>
 				<h1 className='name text-center'>
-					<i className='fab fa-envira'></i> MongoGin
+					<i className='fab fa-envira logo-icon'></i>
+					<span className='text-main'>Mongo</span>Gin
 				</h1>
 				<h2 className='form-title text-center'>SIGN IN</h2>
 				<form className='form' onSubmit={onSubmit}>
-					<div className='form-group'>
-						<label htmlFor='email' className='form-label'>
+					<div className='form-group mt-5'>
+						{/* <label htmlFor='email' className='form-label'>
 							Email
-						</label>
+						</label> */}
 						<div className='input-group'>
 							<input
 								type='email'
 								className='form-control'
-								placeholder='Enter your email...'
+								placeholder='Email'
 								name='email'
 								value={email}
 								onChange={onChange}
 							/>
-							<div className='input-group-prepend'>
+							<div className='input-group-prepend auth-input-group-prepend'>
 								<i className='fas fa-envelope'></i>
 							</div>
 						</div>
 					</div>
-					<div className='form-group'>
-						<label htmlFor='password' className='form-label'>
+					<div className='form-group mt-4'>
+						{/* <label htmlFor='password' className='form-label'>
 							Password
-						</label>
+						</label> */}
 						<div className='input-group'>
 							<input
 								type='password'
 								className='form-control'
-								placeholder='Enter your password...'
+								placeholder='Password'
 								name='password'
 								value={password}
 								onChange={onChange}
 							/>
-							<div className='input-group-prepend'>
+							<div className='input-group-prepend auth-input-group-prepend'>
 								<i className='fas fa-key'></i>
 							</div>
 						</div>

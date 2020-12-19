@@ -2,14 +2,17 @@ const mongoose = require('mongoose');
 
 const ConnectDB = async () => {
 	try {
-		await mongoose.connect(process.env.MONGO_URI, {
+		const mongoURI =
+			process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/mongogin';
+
+		await mongoose.connect(mongoURI, {
 			useNewUrlParser: true,
 			useCreateIndex: true,
 			useUnifiedTopology: true,
 			useFindAndModify: false
 		});
 
-		console.log('MongoDB connected');
+		console.log(`MongoDB successfully connected on ${mongoURI}`);
 	} catch (err) {
 		console.log(err.message);
 		process.exit(1);

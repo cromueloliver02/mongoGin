@@ -1,5 +1,6 @@
 import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
+import { clearContacts } from './contact';
 import { setAlert } from './alert';
 import {
 	// REGISTER_SUCCESS,
@@ -104,4 +105,6 @@ export const login = (email, password) => async dispatch => {
 
 export const logout = () => dispatch => {
 	dispatch({ type: LOGOUT });
+
+	dispatch(clearContacts());
 };
